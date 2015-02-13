@@ -26,10 +26,7 @@ import java.util.Map;
 @SuppressWarnings("serial")
 public class WordCountBolt implements IRichBolt {
 
-    Integer id;
-    String name;
     Map<String, Integer> counters;
-
     private OutputCollector outputCollector;
 
     @SuppressWarnings("rawtypes")
@@ -37,9 +34,6 @@ public class WordCountBolt implements IRichBolt {
                         OutputCollector collector) {
         outputCollector = collector;
         counters = new HashMap<String, Integer>();
-        name = context.getThisComponentId();
-        id = context.getThisTaskId();
-
     }
 
 	public void execute(Tuple input) {
