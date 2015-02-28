@@ -18,9 +18,10 @@ DataOptTopology实例过程：
 GitHub项目链接：https://github.com/blogchong/storm-example
 				//持续更新
 
-文字教程及相关博文，见博客：http://www.blogchong.com/
-米特吧大数据论坛 www.mite8.com 一起交流技术，分享技术资料
+文字教程及相关博文，见博客虫|大数据博客：http://www.blogchong.com/
+米特吧大数据|大数据论坛：www.mite8.com 一起交流技术，分享技术资料
 
 博客虫公众微信号：博客虫(ID:blogchong)
+个人微信：mute88
 
 Storm交流群：storm-分布式-IT技术 191321336
