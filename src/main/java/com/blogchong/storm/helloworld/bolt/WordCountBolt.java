@@ -14,13 +14,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author:  blogchong
- * Blog:    www.blogchong.com
- * Mailbox: blogchong@163.com
- * QQGroup: 191321336
- * Weixin:  blogchong
- * Data:    2015/4/7
- * Describe:单词统计，并且实时获取词频前N的发射出去
+ * @Author:  blogchong
+ * @Blog:    www.blogchong.com
+ * @Mailbox: blogchong@163.com
+ * @QQGroup: 191321336
+ * @Weixin:  blogchong
+ * @Data:    2015/4/7
+ * @Describe:单词统计，并且实时获取词频前N的发射出去
  */
 
 @SuppressWarnings("serial")

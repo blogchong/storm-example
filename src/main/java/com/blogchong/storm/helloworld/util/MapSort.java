@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Author:  blogchong
- * Blog:    www.blogchong.com
- * Mailbox: blogchong@163.com
- * QQGroup: 191321336
- * Weixin:  blogchong
- * Data:    2015/4/7
- * Describe:Map排序工具
+ * @Author:  blogchong
+ * @Blog:    www.blogchong.com
+ * @Mailbox: blogchong@163.com
+ * @QQGroup: 191321336
+ * @Weixin:  blogchong
+ * @Data:    2015/4/7
+ * @Describe:Map排序工具
  */
 
 public class MapSort {

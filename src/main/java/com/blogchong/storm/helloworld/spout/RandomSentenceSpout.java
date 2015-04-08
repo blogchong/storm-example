@@ -11,13 +11,13 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * Author:  blogchong
- * Blog:    www.blogchong.com
- * Mailbox: blogchong@163.com
- * QQGroup: 191321336
- * Weixin:  blogchong
- * Data:    2015/4/7
- * Describe:内存中随机选取待定的英文语句，作为源发射出去
+ * @Author:  blogchong
+ * @Blog:    www.blogchong.com
+ * @Mailbox: blogchong@163.com
+ * @QQGroup: 191321336
+ * @Weixin:  blogchong
+ * @Data:    2015/4/7
+ * @Describe:内存中随机选取待定的英文语句，作为源发射出去
  */
 
 // 随机发送一条内置消息，该spout继承BaseRichSpout/IRichSpout类
