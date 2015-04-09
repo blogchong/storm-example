@@ -13,6 +13,25 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.blogchong.storm.helloworld.WordCountTopology</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<!--  执行 mvn assembly:assembly进行依赖打包，不然直接执行mvn package -->
 
 	<dependencies>
 		<dependency>
@@ -27,4 +46,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 </project>

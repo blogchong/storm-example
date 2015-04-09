@@ -29,9 +29,9 @@ public class WordCountTopology {
         Config config = new Config();
 
         builder.setSpout("RandomSentence", new RandomSentenceSpout(), 1);
-        builder.setBolt("WordNormalizer", new WordNormalizerBolt(), 2).shuffleGrouping(
+        builder.setBolt("WordNormalizer", new WordNormalizerBolt(), 1).shuffleGrouping(
                 "RandomSentence");
-        builder.setBolt("WordCount", new WordCountBolt(), 3).fieldsGrouping("WordNormalizer",
+        builder.setBolt("WordCount", new WordCountBolt(), 1).fieldsGrouping("WordNormalizer",
                 new Fields("word"));
         builder.setBolt("Print", new PrintBolt(), 1).shuffleGrouping(
                 "WordCount");
