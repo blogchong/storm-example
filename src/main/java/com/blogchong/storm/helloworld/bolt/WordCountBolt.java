@@ -77,7 +77,7 @@ public class WordCountBolt implements IRichBolt {
             }
 
             if (count == 0) {
-                word = "[" + key + " : " + counters.get(key) + "]";
+                word = "[" + key + ":" + counters.get(key) + "]";
             } else {
                 word = word + ", [" + key + ":" + counters.get(key) + "]";
             }
