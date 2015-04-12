@@ -37,7 +37,7 @@ public class RandomSentenceSpout extends BaseRichSpout {
 
 	// 进行Tuple处理的主要方法
 	public void nextTuple() {
-		Utils.sleep(1000);
+		Utils.sleep(3000);
 		String[] sentences = new String[] {
 				"jikexueyuan is a good school",
 				"And if the golden sun",
