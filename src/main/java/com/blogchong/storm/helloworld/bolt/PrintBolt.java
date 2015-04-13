@@ -7,13 +7,13 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 
 /**
- * @Author:  blogchong
- * @Blog:    www.blogchong.com
- * @Mailbox: blogchong@163.com
- * @QQGroup: 191321336
- * @Weixin:  blogchong
- * @Data:    2015/4/7
- * @Describe:打印接受的数据
+ * @Author:  		blogchong
+ * @Blog:    			www.blogchong.com
+ * @Mailbox: 		blogchong@163.com
+ * @QQGroup: 	191321336
+ * @Weixin:  		blogchong
+ * @Data:    			2015/4/7
+ * @Describe:		打印接受的数据
  */
 
 @SuppressWarnings("serial")

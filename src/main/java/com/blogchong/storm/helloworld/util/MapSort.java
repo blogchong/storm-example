@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author:  blogchong
- * @Blog:    www.blogchong.com
- * @Mailbox: blogchong@163.com
- * @QQGroup: 191321336
- * @Weixin:  blogchong
- * @Data:    2015/4/7
- * @Describe:Map排序工具
+ * @Author:  		blogchong
+ * @Blog:    			www.blogchong.com
+ * @Mailbox:		blogchong@163.com
+ * @QQGroup: 	191321336
+ * @Weixin:  		blogchong
+ * @Data:    			2015/4/7
+ * @Describe:		Map排序工具
  */
 
 public class MapSort {
@@ -32,19 +32,22 @@ public class MapSort {
 		List list = new LinkedList(map.entrySet());
 
 		Collections.sort(list, new Comparator() {
+			
 			public int compare(Object o1, Object o2) {
-
 				Comparable sort1 = (Comparable) ((Map.Entry) o1).getValue();
 				Comparable sort2 = (Comparable) ((Map.Entry) o2).getValue();
 				return sort2.compareTo(sort1);
 			}
+			
 		});
 
 		Map result = new LinkedHashMap();
 
 		for (Iterator it = list.iterator(); it.hasNext();) {
+			
 			Map.Entry entry = (Map.Entry) it.next();
 			result.put(entry.getKey(), entry.getValue());
+			
 		}
 
 		return result;
