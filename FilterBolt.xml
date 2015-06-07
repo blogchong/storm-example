@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MonitorBolt>
+	<!--MonitorBolt参数-->
+	<Parameter>
+		<!--匹配条件间的逻辑关系：AND OR-->
+		<MatchLogic>AND</MatchLogic>
+		<!--匹配类型列表：regular(正则) routine0/1(常规字符串) range(数字范围)-->
+		<MatchType>regular::range::routine0</MatchType>
+		<!--匹配字段列表-->
+		<MatchField>1::2::5</MatchField>
+		<!--字段值列表-->
+		<FieldValue>.*google.*::200,2001::ina</FieldValue>
+	</Parameter>
+</MonitorBolt>
+

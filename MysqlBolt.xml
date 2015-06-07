@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MysqlBolt>
+	<!--MysqlBolt参数-->
+	<Parameter>
+		<!--Mysql host地址及访问端口-->
+		<Host_port>127.0.0.1:3306</Host_port>
+		<!--数据库名-->
+		<Database>storm</Database>
+		<!--表名-->
+		<From>monitor</From>
+		<!--用户名-->
+		<Username>root</Username>
+		<!--密码-->
+		<Password>123456</Password>
+	</Parameter>
+</MysqlBolt>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaBolt>
+	<!--MetaBolt参数-->
+	<Parameter>
+		<!--MetaQ消息队列-->
+		<MetaTopic>httptest</MetaTopic>
+		<!--MetaQ服务地址-->
+		<MetaZkConnect>192.168.1.167:2181</MetaZkConnect>
+		<!--MetaQ服务路径-->
+		<MetaZkRoot>/meta</MetaZkRoot>
+	</Parameter>
+</MetaBolt>
+

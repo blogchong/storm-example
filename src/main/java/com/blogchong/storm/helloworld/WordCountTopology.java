@@ -13,6 +13,7 @@ import backtype.storm.topology.TopologyBuilder;
 /**
  * @Author: blogchong
  * @Blog: www.blogchong.com
+ * @米特吧大数据论坛　www.mite8.com
  * @Mailbox: blogchong@163.com
  * @QQGroup: 191321336
  * @Weixin: blogchong
