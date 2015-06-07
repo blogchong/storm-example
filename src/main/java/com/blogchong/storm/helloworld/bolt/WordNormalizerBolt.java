@@ -11,13 +11,13 @@ import backtype.storm.tuple.Values;
 import java.util.Map;
 
 /**
- * @Author:  		blogchong
- * @Blog:    			www.blogchong.com
- * @Mailbox: 		blogchong@163.com
- * @QQGroup: 	191321336
- * @Weixin:  		blogchong
- * @Data:    			2015/4/7
- * @Describe:		消息标准化处理
+ * @Author: blogchong
+ * @Blog: www.blogchong.com
+ * @Mailbox: blogchong@163.com
+ * @QQGroup: 191321336
+ * @Weixin: blogchong
+ * @Data: 2015/4/7
+ * @Describe: 消息标准化处理
  */
 
 //将消息标准化，
@@ -28,7 +28,7 @@ public class WordNormalizerBolt implements IRichBolt {
 
     //bolt初始化方法
     @SuppressWarnings("rawtypes")
-	public void prepare(Map stormConf, TopologyContext context,
+    public void prepare(Map stormConf, TopologyContext context,
                         OutputCollector collector) {
         outputCollector = collector;
     }

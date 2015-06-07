@@ -11,13 +11,13 @@ import backtype.storm.StormSubmitter;
 import backtype.storm.topology.TopologyBuilder;
 
 /**
- * @Author:    		blogchong
- * @Blog:        		www.blogchong.com
- * @Mailbox:  		blogchong@163.com
- * @QQGroup: 	191321336
- * @Weixin:  		blogchong
- * @Data:    			2015/4/7
- * @Describe:		启动主类，拓扑构建
+ * @Author: blogchong
+ * @Blog: www.blogchong.com
+ * @Mailbox: blogchong@163.com
+ * @QQGroup: 191321336
+ * @Weixin: blogchong
+ * @Data: 2015/4/7
+ * @Describe: 启动主类，拓扑构建
  */
 
 public class WordCountTopology {
@@ -32,7 +32,7 @@ public class WordCountTopology {
         builder.setBolt("WordNormalizer", new WordNormalizerBolt(), 2).shuffleGrouping(
                 "RandomSentence");
         builder.setBolt("WordCount", new WordCountBolt(), 2).fieldsGrouping("WordNormalizer",
-                new Fields("word"));	
+                new Fields("word"));
         builder.setBolt("Print", new PrintBolt(), 1).shuffleGrouping(
                 "WordCount");
 

@@ -10,61 +10,61 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author:  		blogchong
- * @Blog:    			www.blogchong.com
- * @Mailbox:		blogchong@163.com
- * @QQGroup: 	191321336
- * @Weixin:  		blogchong
- * @Data:    			2015/4/7
- * @Describe:		Map排序工具
+ * @Author: blogchong
+ * @Blog: www.blogchong.com
+ * @Mailbox: blogchong@163.com
+ * @QQGroup: 191321336
+ * @Weixin: blogchong
+ * @Data: 2015/4/7
+ * @Describe: Map排序工具
  */
 
 public class MapSort {
 
-	//对map进行排序，并且进行长度截取
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public static Map<String, Integer> sortByValue(Map<String, Integer> map) {
+    //对map进行排序，并且进行长度截取
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public static Map<String, Integer> sortByValue(Map<String, Integer> map) {
 
-		if (map == null) {
-			return null;
-		}
+        if (map == null) {
+            return null;
+        }
 
-		List list = new LinkedList(map.entrySet());
+        List list = new LinkedList(map.entrySet());
 
-		Collections.sort(list, new Comparator() {
-			
-			public int compare(Object o1, Object o2) {
-				Comparable sort1 = (Comparable) ((Map.Entry) o1).getValue();
-				Comparable sort2 = (Comparable) ((Map.Entry) o2).getValue();
-				return sort2.compareTo(sort1);
-			}
-			
-		});
+        Collections.sort(list, new Comparator() {
 
-		Map result = new LinkedHashMap();
+            public int compare(Object o1, Object o2) {
+                Comparable sort1 = (Comparable) ((Map.Entry) o1).getValue();
+                Comparable sort2 = (Comparable) ((Map.Entry) o2).getValue();
+                return sort2.compareTo(sort1);
+            }
 
-		for (Iterator it = list.iterator(); it.hasNext();) {
-			
-			Map.Entry entry = (Map.Entry) it.next();
-			result.put(entry.getKey(), entry.getValue());
-			
-		}
+        });
 
-		return result;
-	}
+        Map result = new LinkedHashMap();
 
-	public static void main(String[] args) {
-		
-		Map<String, Integer> map = new HashMap<String, Integer> ();
-		map.put("test", 3);
-		map.put("hcy", 1);
-		map.put("put", 2);
-		
-	    map = sortByValue(map);
-		
-		for (String key : map.keySet()) {
-			System.out.println( key + " ==> " + map.get(key));
-		}
-	}
+        for (Iterator it = list.iterator(); it.hasNext(); ) {
+
+            Map.Entry entry = (Map.Entry) it.next();
+            result.put(entry.getKey(), entry.getValue());
+
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        map.put("test", 3);
+        map.put("hcy", 1);
+        map.put("put", 2);
+
+        map = sortByValue(map);
+
+        for (String key : map.keySet()) {
+            System.out.println(key + " ==> " + map.get(key));
+        }
+    }
 
 }
