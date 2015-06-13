@@ -3,11 +3,11 @@
 	<!--MysqlBolt参数-->
 	<Parameter>
 		<!--Mysql host地址及访问端口-->
-		<Host_port>127.0.0.1:3306</Host_port>
+		<Host_port>192.168.5.240:3306</Host_port>
 		<!--数据库名-->
-		<Database>storm</Database>
+		<Database>blogchong</Database>
 		<!--表名-->
-		<From>monitor</From>
+		<From>storm</From>
 		<!--用户名-->
 		<Username>root</Username>
 		<!--密码-->

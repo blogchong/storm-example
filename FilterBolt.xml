@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MonitorBolt>
+<FilterBolt>
 	<!--MonitorBolt参数-->
 	<Parameter>
 		<!--匹配条件间的逻辑关系：AND OR-->
@@ -11,5 +11,5 @@
 		<!--字段值列表-->
 		<FieldValue>.*google.*::200,2001::ina</FieldValue>
 	</Parameter>
-</MonitorBolt>
+</FilterBolt>
 
