@@ -11,7 +11,7 @@
 		<!--用户名-->
 		<Username>root</Username>
 		<!--密码-->
-		<Password>123456</Password>
+		<Password>blogchong</Password>
 	</Parameter>
 </MysqlBolt>
 

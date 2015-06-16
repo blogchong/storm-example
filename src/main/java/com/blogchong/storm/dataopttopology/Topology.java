@@ -45,8 +45,8 @@ public class Topology {
 //				.shuffleGrouping("metaSpout");
 
         // 创建mysql数据存储节点
-//		builder.setBolt("mysql", new MysqlBolt("MysqlBolt.xml"), 3)
-//				.shuffleGrouping("filter");
+		builder.setBolt("mysql", new MysqlBolt("MysqlBolt.xml"), 3)
+				.shuffleGrouping("metaSpout");
 
 		builder.setBolt("print", new PrintBolt(), 1).shuffleGrouping("metaSpout");
 

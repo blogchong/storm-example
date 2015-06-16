@@ -69,6 +69,7 @@
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-lgpl:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.caucho:hessian:3.1.5" level="project" />
     <orderEntry type="library" name="Maven: com.taobao.metamorphosis:metamorphosis-client:1.4.6.2" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.22" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
   </component>
 </module>
