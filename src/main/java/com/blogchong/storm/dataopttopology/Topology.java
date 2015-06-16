@@ -9,6 +9,7 @@ import backtype.storm.topology.TopologyBuilder;
 import com.blogchong.storm.dataopttopology.bolt.FilterBolt;
 import com.blogchong.storm.dataopttopology.bolt.MysqlBolt;
 import com.blogchong.storm.dataopttopology.bolt.PrintBolt;
+import com.blogchong.storm.dataopttopology.spout.MetaSpout;
 import com.blogchong.storm.dataopttopology.spout.ReadLogSpout;
 
 /**
@@ -36,17 +37,18 @@ public class Topology {
 		Config config = new Config();
 
         // 设置喷发节点并分配并发数，该并发数将会控制该对象在集群中的线程数。
-		builder.setSpout("readlog", new ReadLogSpout(), 1);
+//		builder.setSpout("readlog", new ReadLogSpout(), 1);
+        builder.setSpout("metaSpout", new MetaSpout("MetaSpout.xml"), 1);
 
-        // 创建monitor监控过滤节点
-		builder.setBolt("filter", new FilterBolt("FilterBolt.xml"), 3)
-				.shuffleGrouping("readlog");
+        // 创建filter过滤节点
+//		builder.setBolt("filter", new FilterBolt("FilterBolt.xml"), 3)
+//				.shuffleGrouping("metaSpout");
 
         // 创建mysql数据存储节点
-		builder.setBolt("mysql", new MysqlBolt("MysqlBolt.xml"), 3)
-				.shuffleGrouping("filter");
+//		builder.setBolt("mysql", new MysqlBolt("MysqlBolt.xml"), 3)
+//				.shuffleGrouping("filter");
 
-		builder.setBolt("print", new PrintBolt(), 3).shuffleGrouping("filter");
+		builder.setBolt("print", new PrintBolt(), 1).shuffleGrouping("metaSpout");
 
 		config.setDebug(false);
 

@@ -108,7 +108,7 @@ public class MetaSpout implements IRichSpout {
 
         this.reg_tmp = this.spout_debug;
 
-        if (this.flag_par == false) {
+        if (!this.flag_par) {
             System.out
                     .println("MetaSpout-- Erre: can't get the path of Spout.xml!");
         } else {
@@ -227,7 +227,7 @@ public class MetaSpout implements IRichSpout {
     // 数据发布操作
     public void nextTuple() {
 
-        if (this.flag_par == false) {
+        if (!this.flag_par) {
             // 配置文件中参数为空(无法从配置文件中获取正确参数)
             System.out
                     .println("MetaSpout-- Erre: can't get the path of Spout.xml!");
@@ -235,7 +235,7 @@ public class MetaSpout implements IRichSpout {
         } else {
 
             // 检测配置文件是否更改
-            if (flag_load == false) {
+            if (!flag_load) {
                 // 检测配置文件是否更改
                 Loading();
                 if (register != 0) {
@@ -263,7 +263,7 @@ public class MetaSpout implements IRichSpout {
                     this.register++;
                     if (this.register >= this.reg_tmp) {
 
-                        if (this.spout_flag == true) {
+                        if (this.spout_flag) {
 
                             System.out
                                     .println("MetaSpout	--	Send Tuple Count: "

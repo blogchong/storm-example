@@ -73,7 +73,7 @@ public class MetaBolt implements IRichBolt {
 
         this.reg_tmp = MacroDef.meta_debug;
 
-        if (this.flag_par == false) {
+        if (!this.flag_par) {
             System.out
                     .println("MetaSpout-- Erre: can't get the path of Spout.xml!");
         } else {
@@ -89,14 +89,14 @@ public class MetaBolt implements IRichBolt {
     public void execute(Tuple input) {
         String str = input.getString(0);
 
-        if (this.flag_par == false) {
+        if (!this.flag_par) {
             System.out
                     .println("MeataBolt-- Erre: can't get the path of MetaBolt.xml!");
         } else {
 
             try {
                 // 检测配置文件是否更改
-                if (flag_load == false) {
+                if (!flag_load ) {
                     // 配置文件发生更改则进行加载参数操作
                     Loading();
                     if (register != 0) {
@@ -124,7 +124,7 @@ public class MetaBolt implements IRichBolt {
 
                         this.register++;
                         if (this.register >= this.reg_tmp) {
-                            if (MacroDef.meta_flag == true) {
+                            if (!MacroDef.meta_flag ) {
                                 System.out
                                         .println("MetaBolt	--	Send Tuple Count: "
                                                 + this.register);

@@ -3,7 +3,7 @@
 	<!--MetaSpout参数-->
 	<Parameter>
 		<!--MetaQ消息队列-->
-		<MetaRevTopic>blogchong-input</MetaRevTopic>
+		<MetaRevTopic>blogchong-test</MetaRevTopic>
 		<!--MetaQ服务地址-->
 		<MetaZkConnect>192.168.5.240:2181</MetaZkConnect>
 		<!--MetaQ服务路径-->

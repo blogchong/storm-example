@@ -62,7 +62,7 @@ public class MysqlBolt implements IRichBolt {
 		System.out.println("MysqlBolt	--	Start!");
 		this.collector = collector;
 		
-		if (this.flag_par == false) {
+		if (!this.flag_par) {
 			System.out
 					.println("MetaSpout-- Erre: can't get the path of Spout.xml!");
 		} else {
@@ -93,7 +93,7 @@ public class MysqlBolt implements IRichBolt {
         // 表名
 		this.from = MysqlXml.From;
 
-		if (this.mysql.connSQL(host_port, database, username, password) == false) {
+		if (!this.mysql.connSQL(host_port, database, username, password)) {
 
 			System.out
 					.println("MysqlBolt--Config errer, Please check Mysql-conf: "
@@ -109,13 +109,13 @@ public class MysqlBolt implements IRichBolt {
 
 		String str = input.getString(0);
 
-		if (this.flag_par == false) {
+		if (!this.flag_par) {
 			System.out
 					.println("MysqlBolt-- Erre: can't get the path of Mysql.xml!");
 		} else {
 
             // 检测配置文件是否更改
-			if (flag_load == false) {
+			if (!flag_load ) {
                 // 配置文件发生更改则进行加载参数操作
 				Loading();
 				if (register != 0) {
@@ -127,11 +127,11 @@ public class MysqlBolt implements IRichBolt {
 				}
 			}
 
-			if (this.flag_xml == true) {
+			if (this.flag_xml) {
 
 				String sql = send_str(str);
 
-				if (this.mysql.insertSQL(sql) == false) {
+				if (!this.mysql.insertSQL(sql)) {
 					System.out
 							.println("MysqlBolt-- Erre: can't insert tuple into database!");
 					System.out.println("MysqlBolt-- Error Tuple: " + str);

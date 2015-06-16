@@ -30,7 +30,7 @@ public class PrintBolt extends BaseBasicBolt {
 			String mesg = input.getString(0);
 			if (mesg != null)
                 // 打印数据
-				System.out.println("Tuple��" + mesg);
+				System.out.println("Tuple: " + mesg);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

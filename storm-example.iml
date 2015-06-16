@@ -38,7 +38,7 @@
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:2.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.6" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.3" level="project" />
     <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.netty:netty:3.2.2.Final" level="project" />
@@ -59,9 +59,7 @@
     <orderEntry type="library" name="Maven: org.jgrapht:jgrapht-core:0.9.0" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.0.6" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.0.6" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:log4j-over-slf4j:1.6.6" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.6.3.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.taobao.metamorphosis:metamorphosis-all:1.4.6.2" level="project" />
     <orderEntry type="library" name="Maven: com.taobao.metamorphosis:metamorphosis-commons:1.4.6.2" level="project" />
     <orderEntry type="library" name="Maven: com.taobao.gecko:gecko:1.1.4" level="project" />
     <orderEntry type="library" name="Maven: com.101tec:zkclient:0.3" level="project" />

@@ -65,7 +65,7 @@ public class FilterBolt implements IRichBolt {
 		System.out.println("MonitorBolt	--	Start!");
 		this.collector = collector;
 				
-		if (this.flag_par == false) {
+		if (!this.flag_par) {
 			System.out
 					.println("MetaSpout-- Erre: can't get the path of Spout.xml!");
 		} else {
@@ -80,13 +80,13 @@ public class FilterBolt implements IRichBolt {
 	public void execute(Tuple input) {
 		String str = input.getString(0);
 
-		if (this.flag_par == false) {
+		if (!this.flag_par) {
 			System.out
 					.println("MonitorBolt-- Erre: can't get the path of Monitor.xml!");
 		} else {
 
             // 检测配置文件是否更改
-			if (flag_load == false) {
+			if (!flag_load ) {
                 // 配置文件发生更改则进行加载参数操作
 				Loading();
 				if (register != 0) {
@@ -100,7 +100,7 @@ public class FilterBolt implements IRichBolt {
 
 			boolean moni = Monitor(str, this.MatchLogic, this.MatchType,
 					this.MatchField, this.FieldValue);
-			if (moni == true) {
+			if (moni) {
 				this.collector.emit(new Values(str));
 			}
 		}
@@ -138,22 +138,22 @@ public class FilterBolt implements IRichBolt {
 			for (int i = 0; i < flag_init; i++) {
 				if (types[i].equals(MacroDef.RLUE_REGULAR)) {
 					boolean regu = regular(str, fields[i], values[i]);
-					if (regu == true) {
+					if (regu) {
 						flag++;
 					}
 				} else if (types[i].equals(MacroDef.RULE_RANGE)) {
 					boolean ran = range(str, fields[i], values[i]);
-					if (ran == true) {
+					if (ran) {
 						flag++;
 					}
 				} else if (types[i].equals(MacroDef.RULE_ROUTINE0)) {
 					boolean rou0 = routine0(str, fields[i], values[i]);
-					if (rou0 == true) {
+					if (rou0) {
 						flag++;
 					}
 				} else if (types[i].equals(MacroDef.RULE_ROUTINE1)) {
 					boolean rou1 = routine1(str, fields[i], values[i]);
-					if (rou1 == true) {
+					if (rou1) {
 						flag++;
 					}
 				}
@@ -170,22 +170,22 @@ public class FilterBolt implements IRichBolt {
 			for (int i = 0; i < flag_init; i++) {
 				if (types[i].equals(MacroDef.RLUE_REGULAR)) {
 					boolean regu = regular(str, fields[i], values[i]);
-					if (regu == true) {
+					if (regu) {
 						flag++;
 					}
 				} else if (types[i].equals(MacroDef.RULE_RANGE)) {
 					boolean ran = range(str, fields[i], values[i]);
-					if (ran == true) {
+					if (ran) {
 						flag++;
 					}
 				} else if (types[i].equals(MacroDef.RULE_ROUTINE0)) {
 					boolean rou0 = routine0(str, fields[i], values[i]);
-					if (rou0 == true) {
+					if (rou0) {
 						flag++;
 					}
 				} else if (types[i].equals(MacroDef.RULE_ROUTINE1)) {
 					boolean rou1 = routine1(str, fields[i], values[i]);
-					if (rou1 == true) {
+					if (rou1) {
 						flag++;
 					}
 				}
@@ -207,7 +207,7 @@ public class FilterBolt implements IRichBolt {
 		Matcher m = p.matcher(strs[Integer.parseInt(field) - 1]);
 		boolean result = m.matches();
 
-		if (result == true) {
+		if (result) {
 			return true;
 		} else {
 			return false;

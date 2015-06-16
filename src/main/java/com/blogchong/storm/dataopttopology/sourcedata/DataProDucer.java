@@ -1,6 +1,5 @@
 package com.blogchong.storm.dataopttopology.sourcedata;
 
-import com.blogchong.storm.dataopttopology.xml.MetaXml;
 import com.taobao.metamorphosis.Message;
 import com.taobao.metamorphosis.client.MessageSessionFactory;
 import com.taobao.metamorphosis.client.MetaClientConfig;
@@ -8,8 +7,6 @@ import com.taobao.metamorphosis.client.MetaMessageSessionFactory;
 import com.taobao.metamorphosis.client.producer.MessageProducer;
 import com.taobao.metamorphosis.client.producer.SendResult;
 import com.taobao.metamorphosis.utils.ZkUtils;
-
-import java.io.*;
 import java.util.Random;
 
 /**
