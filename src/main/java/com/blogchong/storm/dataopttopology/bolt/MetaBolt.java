@@ -178,6 +178,7 @@ public class MetaBolt implements IRichBolt {
         } catch (final MetaClientException e) {
             e.printStackTrace();
         }
+        flag_load = true;
     }
 
     @Override

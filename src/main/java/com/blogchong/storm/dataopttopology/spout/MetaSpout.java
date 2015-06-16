@@ -222,6 +222,7 @@ public class MetaSpout implements IRichSpout {
         } catch (final MetaClientException e) {
             log.error("Setup meta consumer failed", e);
         }
+        flag_load = true;
     }
 
     // 数据发布操作
@@ -278,6 +279,7 @@ public class MetaSpout implements IRichSpout {
                     this.collector.emit(
                             this.scheme.deserialize(message.getData()),
                             message.getId());
+                    Thread.sleep(1000);
 
                 } catch (final InterruptedException e) {
                 }

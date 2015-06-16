@@ -102,6 +102,7 @@ public class MysqlBolt implements IRichBolt {
 		} else {
 			System.out.println("MysqlBolt-- Conf Loaded: " + this.mysqlXml);
 		}
+        flag_load = true;
 	}
 
 	@Override

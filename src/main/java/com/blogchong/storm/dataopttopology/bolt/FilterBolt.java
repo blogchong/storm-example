@@ -121,7 +121,7 @@ public class FilterBolt implements IRichBolt {
 		this.MatchType = FilterXml.MatchType;
 		this.MatchField = FilterXml.MatchField;
 		this.FieldValue = FilterXml.FieldValue;
-		
+		flag_load = true;
 	}
 
 	private boolean Monitor(String str, String logic, String type,
