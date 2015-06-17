@@ -48,7 +48,7 @@ public class DataProDucer {
         String[] validity = {"3", "5", "20", "100", "32", "12", "50", "1",
                 "23", "45", "200"};
         String[] seller = {"Huang", "Lina", "James", "Gale", "Kathryn",
-                "Anze", "Green", "Facke", "Nina", "Litao", "Pony", "Blogchong", "Mite"};
+                "Acong", "Green", "Facke", "Nina", "Litao", "Pony", "Blogchong", "Mite"};
 
         ZkUtils.ZKConfig zkconf = new ZkUtils.ZKConfig();
         zkconf.zkConnect = zkConnect;
@@ -71,7 +71,7 @@ public class DataProDucer {
                     + seller[random.nextInt(seller.length)];
 
             sendResult = messageProducer
-                    .sendMessage(new Message(topic, (records + "\n").getBytes()));
+                    .sendMessage(new Message(topic, (records).getBytes()));
 
             if (sendResult.isSuccess()) {
                 System.out.println("消息：[" + records + "] 发送成功！");
@@ -79,7 +79,7 @@ public class DataProDucer {
                 System.err.println("消息：[" + records + "] 发送失败！");
             }
 
-            Thread.sleep(1000);
+            Thread.sleep(100);
         }
 
     }

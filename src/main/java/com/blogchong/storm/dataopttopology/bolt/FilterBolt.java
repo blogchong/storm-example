@@ -62,7 +62,7 @@ public class FilterBolt implements IRichBolt {
 	public void prepare(Map stormConf, TopologyContext context,
 			OutputCollector collector) {
 
-		System.out.println("MonitorBolt	--	Start!");
+		System.out.println("FilterBolt	--	Start!");
 		this.collector = collector;
 				
 		if (!this.flag_par) {
@@ -82,7 +82,7 @@ public class FilterBolt implements IRichBolt {
 
 		if (!this.flag_par) {
 			System.out
-					.println("MonitorBolt-- Erre: can't get the path of Monitor.xml!");
+					.println("FilterBolt-- Erre: can't get the path of Filter.xml!");
 		} else {
 
             // 检测配置文件是否更改
@@ -90,10 +90,10 @@ public class FilterBolt implements IRichBolt {
                 // 配置文件发生更改则进行加载参数操作
 				Loading();
 				if (register != 0) {
-					System.out.println("MonitorBolt-- Conf Change: "
+					System.out.println("FilterBolt-- Conf Change: "
 							+ this.monitorXml);
 				} else {
-					System.out.println("MonitorBolt-- Conf Loaded: "
+					System.out.println("FilterBolt-- Conf Loaded: "
 							+ this.monitorXml);
 				}
 			}
@@ -114,7 +114,7 @@ public class FilterBolt implements IRichBolt {
     // 加载参数操作
 	public void Loading() {
         // 从conf中获取参数
-		System.out.println("monitorXml:     " + this.monitorXml);
+		System.out.println("FilterXml:     " + this.monitorXml);
 
 		new FilterXml(this.monitorXml).read();
 		this.MatchLogic = FilterXml.MatchLogic;

@@ -279,7 +279,7 @@ public class MetaSpout implements IRichSpout {
                     this.collector.emit(
                             this.scheme.deserialize(message.getData()),
                             message.getId());
-                    Thread.sleep(1000);
+                    Thread.sleep(10);
 
                 } catch (final InterruptedException e) {
                 }

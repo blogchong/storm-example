@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FilterBolt>
-	<!--MonitorBolt参数-->
+	<!--FilterBolt参数-->
 	<Parameter>
 		<!--匹配条件间的逻辑关系：AND OR-->
 		<MatchLogic>AND</MatchLogic>
@@ -9,7 +9,7 @@
 		<!--匹配字段列表-->
 		<MatchField>1::2::5</MatchField>
 		<!--字段值列表-->
-		<FieldValue>.*google.*::200,2001::ina</FieldValue>
+		<FieldValue>.*google.*::2,20001::on</FieldValue>
 	</Parameter>
 </FilterBolt>
 

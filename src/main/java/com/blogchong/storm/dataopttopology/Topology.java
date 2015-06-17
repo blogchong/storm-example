@@ -38,17 +38,17 @@ public class Topology {
 
         // 设置喷发节点并分配并发数，该并发数将会控制该对象在集群中的线程数。
 //		builder.setSpout("readlog", new ReadLogSpout(), 1);
-        builder.setSpout("metaSpout", new MetaSpout("MetaSpout.xml"), 1);
+        builder.setSpout("spout", new MetaSpout("MetaSpout.xml"), 1);
 
         // 创建filter过滤节点
 //		builder.setBolt("filter", new FilterBolt("FilterBolt.xml"), 3)
-//				.shuffleGrouping("metaSpout");
+//				.shuffleGrouping("spout");
 
         // 创建mysql数据存储节点
-		builder.setBolt("mysql", new MysqlBolt("MysqlBolt.xml"), 3)
-				.shuffleGrouping("metaSpout");
+//		builder.setBolt("mysql", new MysqlBolt("MysqlBolt.xml"), 1)
+//				.shuffleGrouping("spout");
 
-		builder.setBolt("print", new PrintBolt(), 1).shuffleGrouping("metaSpout");
+		builder.setBolt("print", new PrintBolt(), 1).shuffleGrouping("spout");
 
 		config.setDebug(false);
 
