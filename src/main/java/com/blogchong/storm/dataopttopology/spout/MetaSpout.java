@@ -66,7 +66,7 @@ public class MetaSpout implements IRichSpout {
 
     private transient LinkedTransferQueue<MetaMessageWrapper> messageQueue;
 
-    private long spout_debug = 5000;
+    private long spout_debug = 5;
     private long register = 0;
     private long reg_tmp = 0;
     private boolean spout_flag = true;
@@ -279,7 +279,7 @@ public class MetaSpout implements IRichSpout {
                     this.collector.emit(
                             this.scheme.deserialize(message.getData()),
                             message.getId());
-                    Thread.sleep(10);
+                    Thread.sleep(100);
 
                 } catch (final InterruptedException e) {
                 }

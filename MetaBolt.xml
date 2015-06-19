@@ -3,9 +3,9 @@
 	<!--MetaBolt参数-->
 	<Parameter>
 		<!--MetaQ消息队列-->
-		<MetaTopic>blogchong-output</MetaTopic>
+		<MetaTopic>blogchong-test</MetaTopic>
 		<!--MetaQ服务地址-->
-		<MetaZkConnect>192.168.5.240:2181</MetaZkConnect>
+		<MetaZkConnect>192.168.5.242:2181</MetaZkConnect>
 		<!--MetaQ服务路径-->
 		<MetaZkRoot>/meta</MetaZkRoot>
 	</Parameter>

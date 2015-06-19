@@ -27,21 +27,21 @@ public class GetSource {
 
         Random random = new Random();
 
-        int note_num = 100000;
+        int note_num = 10000;
 
         //构造一个随机记录
-        String[] net0 = {"baidu", "hitwh", "google", "gooddy", "hadoop",
-                "storm", "tengxun", "book", "phone", "fuck"};
-        String[] net1 = {"com", "net", "cn", "edu", "tv", "org", "us", "jp",
+        String[] net0 = {"baidu", "hitwh", "google", "jikexueyuan", "hadoop",
+                "storm", "blogchong", "cooje", "mite8", "mygod"};
+        String[] net1 = {"com", "net", "cn", "edu", "tv", "org", "us", "jp","club" ,"pub",
                 "rec", "info"};
         String[] times = {"2000", "2001", "2002", "2005", "2007", "2010",
-                "2011", "2012", "2013", "1998"};
+                "2011", "2012", "2013", "1998", "2014", "2015"};
         String[] value = {"1326", "1446", "1401", "1202", "1871", "2000",
-                "122", "23000", "400", "240"};
+                "122", "23000", "400", "240", "8888", "100000", "34123"};
         String[] validity = {"3", "5", "20", "100", "32", "12", "50", "1",
-                "23", "45"};
+                "23", "45", "200"};
         String[] seller = {"Huang", "Lina", "James", "Gale", "Kathryn",
-                "Anze", "Green", "Facke", "Nina", "Litao"};
+                "Acong", "Green", "Facke", "Nina", "Litao", "Pony", "Blogchong", "Mite"};
 
         // 写入中文字符时解决中文乱码问题
         FileOutputStream fos = null;
@@ -60,12 +60,13 @@ public class GetSource {
 
         for (int i = 0; i < note_num; i++) {
             // 构造域名
-            String net = "www." + net0[random.nextInt(10)] + "."
-                    + net1[random.nextInt(10)];
-            String records = net + "\t" + value[random.nextInt(10)] + "\t"
-                    + times[random.nextInt(10)] + "\t"
-                    + validity[random.nextInt(10)] + "\t"
-                    + seller[random.nextInt(10)];
+            String net = "www." + net0[random.nextInt(net0.length)] + "."
+                    + net1[random.nextInt(net1.length)];
+            String records = net + "\t" + value[random.nextInt(value.length)] + "\t"
+                    + times[random.nextInt(times.length)] + "\t"
+                    + validity[random.nextInt(validity.length)] + "\t"
+                    + seller[random.nextInt(seller.length)];
+
             try {
                 bw.write(records);
                 bw.newLine();

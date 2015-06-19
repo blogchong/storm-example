@@ -50,7 +50,7 @@ public class MetaBolt implements IRichBolt {
 
     private boolean flag_par = true;
 
-    private long meta_debug = 10000;
+    private long meta_debug = 5;
     private long register = 0;
     private long reg_tmp = 0;
 
@@ -121,6 +121,9 @@ public class MetaBolt implements IRichBolt {
                                         + sendResult.getErrorMessage());
                         System.err.println("MetaBolt-- Error Tuple: " + str);
                     } else {
+
+                        System.out
+                                .println("MetaBolt	--	Send Message success: "+ str);
 
                         this.register++;
                         if (this.register >= this.reg_tmp) {

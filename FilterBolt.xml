@@ -9,7 +9,7 @@
 		<!--匹配字段列表-->
 		<MatchField>1::2::5</MatchField>
 		<!--字段值列表-->
-		<FieldValue>.*google.*::2,20001::on</FieldValue>
+		<FieldValue>.*(net|com|org|cn).*::1000,2001::ong</FieldValue>
 	</Parameter>
 </FilterBolt>
 

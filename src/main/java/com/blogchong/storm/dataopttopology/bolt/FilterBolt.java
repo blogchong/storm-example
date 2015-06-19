@@ -103,6 +103,7 @@ public class FilterBolt implements IRichBolt {
 			if (moni) {
 				this.collector.emit(new Values(str));
 			}
+
 		}
 	}
 
@@ -250,7 +251,7 @@ public class FilterBolt implements IRichBolt {
 		String[] strs = str.split(MacroDef.FLAG_TABS);
 		String strss = strs[Integer.parseInt(field) - 1];
 
-		if (strss.contains(value) && !strss.equals(value)) {
+		if (strss.contains(value)) {
 			return true;
 		} else {
 			return false;

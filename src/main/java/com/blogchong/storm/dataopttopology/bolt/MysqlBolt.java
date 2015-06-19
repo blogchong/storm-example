@@ -100,7 +100,7 @@ public class MysqlBolt implements IRichBolt {
 							+ this.mysqlXml);
 			flag_xml = false;
 		} else {
-			System.out.println("MysqlBolt-- Conf Loaded: " + this.mysqlXml);
+			System.out.println("MysqlBolt-- test connect mysql success: " + this.mysqlXml);
 		}
         flag_load = true;
 	}
