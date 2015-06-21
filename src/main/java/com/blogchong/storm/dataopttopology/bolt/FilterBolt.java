@@ -104,6 +104,7 @@ public class FilterBolt implements IRichBolt {
 				this.collector.emit(new Values(str));
 			}
 
+            this.collector.ack(input);
 		}
 	}
 

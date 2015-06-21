@@ -16,7 +16,7 @@ import org.w3c.dom.NodeList;
  * @QQ_G   191321336
  * @Weixin: blogchong
  * @version 2015年06月07日 上午12:31:25
- * @Des  消费者Metaq接口的配置读取接口
+ * @Des  消费者Metaq接口的配置xml读取接口
  */
 
 public class MetaXml {

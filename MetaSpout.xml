@@ -9,7 +9,7 @@
 		<!--MetaQ服务路径-->
 		<MetaZkRoot>/meta</MetaZkRoot>
 		<!--MetaQ消费者组ID-->
-		<MetaConsumerConf>blogchong04</MetaConsumerConf>
+		<MetaConsumerConf>blogchong05</MetaConsumerConf>
 	</Parameter>
 </MetaSpout>
 

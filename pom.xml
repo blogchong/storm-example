@@ -43,6 +43,7 @@
 					<artifactId>log4j-over-slf4j</artifactId>
 					<groupId>org.slf4j</groupId>
 				</exclusion>
+                <!--与 slf4j-log4j12 冲突，所以需要进行exclude移除-->
 			</exclusions>
 		</dependency>
 

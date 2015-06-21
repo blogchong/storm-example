@@ -82,18 +82,15 @@ public class ReadLogSpout implements IRichSpout {
 
 	@Override
 	public void ack(Object msgId) {
-
 	}
 
 	@Override
 	public void fail(Object msgId) {
-
 	}
 
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 		declarer.declare(new Fields("str"));
-
 	}
 
 	@Override

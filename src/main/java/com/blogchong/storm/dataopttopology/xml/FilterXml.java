@@ -17,7 +17,7 @@ import java.io.File;
  * @QQ_G   191321336
  * @Weixin: blogchong
  * @version 2015年06月07日 上午12:31:25
- * @Des  数据过滤Filter接口的配置读取接口
+ * @Des  数据过滤Filter接口的xml配置读取接口
  */
 
 public class FilterXml {

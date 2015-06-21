@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
-
 import com.blogchong.storm.dataopttopology.util.ConfCheck;
 import com.blogchong.storm.dataopttopology.util.MacroDef;
 import com.blogchong.storm.dataopttopology.util.SpoutMetaq.MetaMessageWrapper;
@@ -27,7 +26,6 @@ import com.taobao.metamorphosis.client.MetaMessageSessionFactory;
 import com.taobao.metamorphosis.client.consumer.ConsumerConfig;
 import com.taobao.metamorphosis.client.consumer.MessageConsumer;
 import com.taobao.metamorphosis.client.consumer.MessageListener;
-
 
 /**
  * @author blogchong

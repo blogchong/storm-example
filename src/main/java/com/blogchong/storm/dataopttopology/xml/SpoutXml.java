@@ -11,12 +11,12 @@ import org.w3c.dom.NodeList;
 /**
  * @author blogchong
  * @Blog   www.blogchong.com
- * @米特吧大数据论坛　www.mite8.com
+ * @米特吧大数据论坛　 www.mite8.com
  * @email  blogchong@163.com
  * @QQ_G   191321336
  * @Weixin: blogchong
  * @version 2015年06月07日 上午12:31:25
- * @Des  数据接入Spout接口的配置读取接口
+ * @Des  数据接入Spout接口的xml配置读取接口
  */
 
 public class SpoutXml {
