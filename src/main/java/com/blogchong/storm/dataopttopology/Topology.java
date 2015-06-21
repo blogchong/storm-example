@@ -24,10 +24,6 @@ import com.blogchong.storm.dataopttopology.spout.ReadLogSpout;
  * @Des  数据源Spout，从metaq中消费数据/从文本中读取数据
  */
 
-/**
- * 主类，只要spout、bolt中有的，可以随意组合top
- */
-
 public class Topology {
 
     // 实例化TopologyBuilder类。
@@ -37,7 +33,7 @@ public class Topology {
 			AlreadyAliveException, InvalidTopologyException {
 		Config config = new Config();
 
-        // 设置喷发节点并分配并发数，该并发数将会控制该对象在集群中的线程数。
+        //数据源-->读取log文件/从消息队列metaq中消费
 //		builder.setSpout("spout", new ReadLogSpout(), 1);
         builder.setSpout("spout", new MetaSpout("MetaSpout.xml"), 1);
 
@@ -49,10 +45,11 @@ public class Topology {
 		builder.setBolt("mysql", new MysqlBolt("MysqlBolt.xml"), 1)
 				.shuffleGrouping("filter");
 
-        //metaq回写节点
+        //创建metaq回写节点
         builder.setBolt("meta", new MetaBolt("MetaBolt.xml"), 1)
                 .shuffleGrouping("filter");
 
+        //创建print消息打印节点
 		builder.setBolt("print", new PrintBolt(), 1).shuffleGrouping("filter");
 
 		config.setDebug(false);
@@ -65,7 +62,7 @@ public class Topology {
             // 这里是本地模式下运行的启动代码。
 			config.setMaxTaskParallelism(1);
 			LocalCluster cluster = new LocalCluster();
-			cluster.submitTopology("simple", config, builder.createTopology());
+			cluster.submitTopology("dataopttopology", config, builder.createTopology());
 		}
 
 	}

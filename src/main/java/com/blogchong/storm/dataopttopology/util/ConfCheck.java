@@ -4,7 +4,6 @@ import com.blogchong.storm.dataopttopology.bolt.FilterBolt;
 import com.blogchong.storm.dataopttopology.bolt.MetaBolt;
 import com.blogchong.storm.dataopttopology.bolt.MysqlBolt;
 import com.blogchong.storm.dataopttopology.spout.MetaSpout;
-
 import java.io.File;
 
 /**

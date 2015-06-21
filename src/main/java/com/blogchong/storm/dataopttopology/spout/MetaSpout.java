@@ -41,45 +41,27 @@ import com.taobao.metamorphosis.client.consumer.MessageListener;
 public class MetaSpout implements IRichSpout {
 
     public static final String FETCH_MAX_SIZE = "meta.fetch.max_size";
-
     public static final String TOPIC = "meta.topic";
-
     public static final int DEFAULT_MAX_SIZE = 128 * 1024;
-
     private transient MessageConsumer messageConsumer;
-
     private transient MessageSessionFactory sessionFactory;
-
     private MetaClientConfig metaClientConfig;
-
     private ConsumerConfig consumerConfig;
-
     static final Log log = LogFactory.getLog(MetaSpout.class);
-
     public static final long WAIT_FOR_NEXT_MESSAGE = 1L;
-
     private transient ConcurrentHashMap<Long, MetaMessageWrapper> id2wrapperMap;
-
     private transient SpoutOutputCollector collector;
-
     private transient LinkedTransferQueue<MetaMessageWrapper> messageQueue;
-
     private long spout_debug = 5;
     private long register = 0;
     private long reg_tmp = 0;
     private boolean spout_flag = true;
-
     String topic = "storm-test";
-
     private final Scheme scheme = new StringScheme();
-
     private boolean flag_par = true;
-
     private String spoutXml = "MetaSpout.xml";
-
     //是否加载配置标志位
     private static boolean flag_load = false;
-
     @SuppressWarnings("rawtypes")
     private Map conf = null;
 
@@ -100,10 +82,8 @@ public class MetaSpout implements IRichSpout {
 
         this.collector = collector;
         this.conf = conf;
-
         this.spout_debug = MacroDef.SPOUT_DEBUG;
         this.spout_flag = MacroDef.SPOUT_FLAG;
-
         this.reg_tmp = this.spout_debug;
 
         if (!this.flag_par) {
