@@ -50,7 +50,7 @@ public class Topology {
                 .shuffleGrouping("filter");
 
         //创建print消息打印节点
-		builder.setBolt("print", new PrintBolt(), 1).shuffleGrouping("filter");
+//		builder.setBolt("print", new PrintBolt(), 1).shuffleGrouping("filter");
 
 		config.setDebug(false);
 
